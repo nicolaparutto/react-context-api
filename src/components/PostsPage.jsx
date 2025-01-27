@@ -4,6 +4,7 @@ function PostsPage() {
 
    return (
       <>
+         <h1>Pagina Dei Post</h1>
          <PostsList />
       </>
    )

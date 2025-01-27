@@ -1,10 +1,11 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import PostCard from "./PostCard";
 
 function PostsList() {
   const defaultApiUrl = "http://localhost:3000"
 
-  const [postsData, setPostsData] = useState(null);
+  const [postsData, setPostsData] = useState([]);
 
   const fetchPosts = () => {
     axios.get(`${defaultApiUrl}/posts`)
@@ -20,14 +21,9 @@ function PostsList() {
   return (
     <section className="container">
       <div className="cards-container">
-        <div className="card">
-          <div className="card-image">
-
-          </div>
-          <div className="card-text">
-
-          </div>
-        </div>
+        {postsData.map(post => (
+          <PostCard key={post.id} postData={post} />
+        ))}
       </div>
     </section>
   )
