@@ -1,10 +1,13 @@
+import PostsPage from "./components/PostsPage"
+
 function App() {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <PostsPage />
     </>
   )
+
 }
 
 export default App
