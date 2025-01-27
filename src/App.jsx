@@ -1,10 +1,12 @@
 import PostsPage from "./components/PostsPage"
-
+import { PostsProvider } from "./context/PostsDataContext"
 function App() {
 
   return (
     <>
-      <PostsPage />
+      <PostsProvider>
+        <PostsPage />
+      </PostsProvider>
     </>
   )
 

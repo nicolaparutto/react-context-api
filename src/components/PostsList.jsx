@@ -1,18 +1,10 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
+import { useEffect } from "react";
 import PostCard from "./PostCard";
+import { usePostsDataContext } from "../context/PostsDataContext";
 
 function PostsList() {
-  const defaultApiUrl = "http://localhost:3000"
 
-  const [postsData, setPostsData] = useState([]);
-
-  const fetchPosts = () => {
-    axios.get(`${defaultApiUrl}/posts`)
-      .then(res => {
-        setPostsData(res.data)
-      })
-  }
+  const { postsData, fetchPosts } = usePostsDataContext();
 
   useEffect(() => {
     fetchPosts()
