@@ -14,4 +14,4 @@ React Context API
 - Fare in modo che il componente PostList.jsx recuperi i post consumando il Context e crei dunque una card per ciascuno di essi.
 
 La struttura deve essere: <br>
-App.jsx --> PostPage.jsx --> PostList.jsx --> PostCard.jsx
+App.jsx --> PostsPage.jsx --> PostsList.jsx --> PostCard.jsx
